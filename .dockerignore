@@ -1,0 +1,7 @@
+application/cache/*
+setup-docker
+docs
+.gitignore
+.git*
+docker-compose.dev.yml
+Dockerfile.dev

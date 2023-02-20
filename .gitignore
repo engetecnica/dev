@@ -1,0 +1,13 @@
+log/*
+.vscode/launch.json
+application/cache/*
+assets/uploads/*/*
+vendor/*
+!application/cache/.gitkeep
+!assets/uploads/*/.gitkeep
+!assets/uploads/.gitkeep
+vendor
+*.DS_Store
+local_bd.sql
+*dump_*
+.env

@@ -1,0 +1,51 @@
+{
+    "minimum-stability" : "stable",
+    "config": {
+        "platform": {
+            "php": "7.4.21"
+         }
+   },    
+    "require": {
+        "php": "^7.3|^8.0",
+        "deividfortuna/fipe": "2.4.1",
+        "mpdf/mpdf": "^8.0",
+        "ext-gd": "*",
+        "phpoffice/phpspreadsheet": "^1.18",
+        "guzzlehttp/psr7": "2.1.1",
+        "guzzlehttp/guzzle": "^7.0",
+        "vlucas/phpdotenv": "^5.3",
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "^197.0"
+    },
+    "scripts": {
+        "dev" : [
+            "php -S 0.0.0.0:8000 -t ./"
+        ],
+        "dev:docker": [
+            "docker-compose up --build"
+        ],
+        "heroku:debug": [
+            "heroku logs --source app --tail"
+        ],
+        "heroku:bash": [
+            "heroku run bash --type=worker"
+        ],
+        "docker:dump": [
+            "docker exec -it engetecnica_db mysqldump -u root --password=\"root\" engetecnica > ../engetecnica-dump.sql"
+        ],
+        "docker:db": [
+            "docker exec -it engetecnica_db /bin/bash"
+        ],
+        "docker:web": [
+            "docker exec -it engetecnica_web /bin/bash"
+        ],
+        "heroku:setup": [
+            "heroku run \"bash setup/setup.sh\""
+        ],
+        "migrate": [
+            "php index.php migrate"
+        ]
+    }
+}

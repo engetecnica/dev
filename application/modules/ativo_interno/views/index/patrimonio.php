@@ -1,0 +1,1 @@
+<span class="badge badge-primary"><?php echo $row->codigo_patrimonio; ?></span>

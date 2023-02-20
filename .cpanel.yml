@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sgaeng/public_html/
+    - /bin/cp -Ru ./* $DEPLOYPATH
+    - 
+    - C:/
+    - 
+    - .ssh/id_rsa.pub
